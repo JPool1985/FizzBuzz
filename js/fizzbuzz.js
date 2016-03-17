@@ -1,11 +1,11 @@
 // This function will execute when the site is fully loaded.
 $(function(){
 	// Call the fizzbuzz function
-	fizzbuzz()
+	fizzbuzz(100)
 })
 // Function acts for 'fizzbuzz'
-function fizzbuzz(){
-	for (var i = 0; i <= 100; i++){
+function fizzbuzz(limit){
+	for (var i = 0; i <= limit; i++){
 
 		if (i % 5==0 && i % 3==0) {
 			console.log('FizzBuzz');
