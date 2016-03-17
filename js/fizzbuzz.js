@@ -1,7 +1,9 @@
 // This function will execute when the site is fully loaded.
 $(function(){
-	// Call the fizzbuzz function
-	fizzbuzz(100)
+	// Ask user for a fizzbuzz limit
+	var userlimit = prompt("Please enter a number");
+	// Call the fizzbuzz function with the userlimit
+	fizzbuzz(userlimit)
 })
 // Function acts for 'fizzbuzz'
 function fizzbuzz(limit){
