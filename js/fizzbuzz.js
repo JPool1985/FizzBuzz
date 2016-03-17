@@ -2,8 +2,14 @@
 $(function(){
 	// Ask user for a fizzbuzz limit
 	var userlimit = prompt("Please enter a number");
-	// Call the fizzbuzz function with the userlimit
-	fizzbuzz(userlimit)
+	if (isInt(userlimit)) {
+		// Call the fizzbuzz function with the userlimit
+		fizzbuzz(userlimit);
+	}
+	else {
+		// Let user number know that value entered wasn't a number
+		alert ("You didn't enter a number")
+	}
 })
 // Function acts for 'fizzbuzz'
 function fizzbuzz(limit){
@@ -19,4 +25,10 @@ function fizzbuzz(limit){
 			console.log(i);
 		}
 	}
+}
+// Returns true if value is a number
+function isInt(value) {
+	return !isNaN(value) && 
+	parseInt(Number(value)) == value && 
+	!isNaN(parseInt(value, 10));
 }
